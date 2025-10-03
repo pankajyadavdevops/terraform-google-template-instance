@@ -8,7 +8,7 @@ provider "google" {
 ##### vpc module call.
 #####==============================================================================
 module "vpc" {
-  source                                    = "git@github.com:pankajyadavdevops/terraform-google-vpc.git"
+  source                                    = "git@github.com:pankajyadavdevops/terraform-google-vpc.git?ref=v1.0.2"
   version                                   = "1.0.3"
   name                                      = "app"
   environment                               = "test"
@@ -21,7 +21,7 @@ module "vpc" {
 ##### subnet module call.
 #####==============================================================================
 module "subnet" {
-  source        = "git@github.com:pankajyadavdevops/terraform-google-subnet.git"
+  source        = "git@github.com:pankajyadavdevops/terraform-google-subnet.git?ref=v1.0.2"
   version       = "1.0.2"
   name          = "app"
   environment   = "test"
@@ -35,7 +35,7 @@ module "subnet" {
 ##### firewall module call.
 #####==============================================================================
 module "firewall" {
-  source      = "git@github.com:pankajyadavdevops/terraform-google-firewall.git"
+  source      = "git@github.com:pankajyadavdevops/terraform-google-firewall.git?ref=v1.0.2"
   version     = "1.0.2"
   name        = "app"
   environment = "test"
@@ -62,7 +62,7 @@ module "firewall" {
 ##### Single-service-account module call .
 #####==============================================================================
 module "service-account" {
-  source  = "git@github.com:pankajyadavdevops/terraform-google-service-account.git"
+  source  = "git@github.com:pankajyadavdevops/terraform-google-service-account.git?ref=v1.0.2"
   version = "1.0.3"
   service_account = [
     {
